@@ -1,0 +1,89 @@
+/* ServicePage.css */
+
+/* Moving Underline with Star */
+.underline-star {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    animation: moveUnderline 3s infinite ease-in-out;
+  }
+  
+  .underline-star::before {
+    content: "★";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffd700;
+    font-size: 20px;
+    animation: glowStar 2s infinite alternate;
+  }
+  
+  @keyframes moveUnderline {
+    0% {
+      transform: translateX(-50%) scaleX(0.5);
+    }
+    50% {
+      transform: translateX(-50%) scaleX(1);
+    }
+    100% {
+      transform: translateX(-50%) scaleX(0.5);
+    }
+  }
+  
+  @keyframes glowStar {
+    0% {
+      text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 20px #ffd700;
+    }
+    100% {
+      text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+    }
+  }
+  
+  /* Gradient Text Effect */
+  .text-gradient {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 3s infinite alternate;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Icon Hover Effect */
+  .w-10.h-10 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .w-10.h-10:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  }
+  
+  /* Glow Effect for Titles */
+  .text-4xl.font-bold.text-center.mt-12 {
+    position: relative;
+    animation: glowTitle 3s infinite alternate;
+  }
+  
+  @keyframes glowTitle {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+  }
+  
