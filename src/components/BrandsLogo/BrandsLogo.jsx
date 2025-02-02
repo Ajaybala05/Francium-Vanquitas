@@ -21,14 +21,14 @@ const BrandsLogo = () => {
     {
       id: 2,
       name: "Shark",
-      tagline: "Thoroughness and Sharp Analysis",
+      tagline: "The Deep Diver",
       image: falci,
       description: "The Shark represents thoroughness and sharp analysis, diving deep into macro and microeconomic factors influencing currency dynamics. Key functionalities include macro analysis of interest rates and GDP growth, micro analysis of industry data, and benchmark rates analysis to deliver actionable intelligence."
     },
     {
       id: 3,
       name: "Honeybadger",
-      tagline: "Precision, Resilience, and Execution",
+      tagline: "The Relentless Executer",
       image: mammal,
       description: "The Honeybadger embodies precision and resilience, executing trades with surgical accuracy based on insights from the Falcon and Shark. Key functionalities include strategic entry and exit points for optimal trading moments, risk management through stop-loss orders, and automated execution using advanced algorithms to capitalize on identified opportunities."
     }

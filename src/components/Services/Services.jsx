@@ -6,16 +6,16 @@ import { FaClipboardList } from 'react-icons/fa';
 
 const skillsData = [
   {
-    name: "Trading Strategy Consultancy",
-    icon: <FaChartLine className="text-4xl text-primary" />,
+    name: "Specialized Currency Focus",
+    icon: < FaRegMoneyBillAlt className="text-4xl text-primary" />,
     link: "#",
     description:
-      " Professional guidance on designing and optimizing trading strategies, leveraging decades of experience in the field to help traders avoid common pitfalls and improve performance",
+      " Francium Vanquitas concetrates exclusively on currency markets to maximize investment oppurtunities ans also we leverage comprehensive macroeconomic analysis",
     aosDelay: "200",
   },
   {
     name: "Options Trading Strategies",
-    icon: <FaRegMoneyBillAlt className="text-4xl text-primary" />,
+    icon: < FaChartLine className="text-4xl text-primary" />,
     link: "#",
     description:
       "Tailored investment advice focused on options trading, analyzing individual financial goals and risk tolerance",

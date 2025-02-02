@@ -61,9 +61,7 @@ const Footer = () => {
               Francium vanquitas
             </h1>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit consectetur adipisicing elit ipsum
-              dolor sit amet consectetur. adipisicing{" "}
+            Francium Vanquitas specializes in forex trading solutions, using advanced technologies to empower traders. With real-time insights and data analytics, they enhance trading strategies, helping clients navigate market fluctuations while maximizing opportunities and minimizing risks            {" "}
             </p>
             <br />
             {/* Social Handle */}
