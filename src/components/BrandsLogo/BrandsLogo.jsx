@@ -46,10 +46,24 @@ const BrandsLogo = () => {
 
   return (
     <>
-      <div id="strategies" className="container mb-16 mt-12 sm:mt-8">
-        <h1 className="text-center text-3xl lg:text-4xl font-bold bold text-violet-950 dark:text-white mt-8 mb-12">
-          Our Strategies
-        </h1>
+    <div className="dark:bg-gray-950 dark:text-white">
+    <div id="strategies" className="container mb-16 mt-8 md:mt-12 ">
+    <div className=" p-8 pb-12 text-center space-y-3">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="500"
+              className="text-center text-3xl lg:text-4xl font-bold text-violet-950 dark:text-white"
+            >
+              Our Strategy
+            </h1>
+            <p
+              data-aos="fade-up"
+              className="text-gray-600 dark:text-gray-400 text-sm"
+            >
+             Our path to sustainable and a balanced aproach for Growth
+            </p>
+          </div>
+        
         <div className="py-8 md:px-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
           {strategies.map((strategy) => (
             <div
@@ -97,7 +111,7 @@ const BrandsLogo = () => {
               {/* Long Description (Collapsible) */}
               {expandedCard === strategy.id && (
                 <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-left">
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <p className="text-gray-700 font-bold dark:text-gray-300">
                     {strategy.description}
                   </p>
                 </div>
@@ -110,12 +124,14 @@ const BrandsLogo = () => {
         <div className="flex items-center justify-center mt-6">
           <button className="relative overflow-hidden bg-[#6153CD] text-[#FFF8E5] font-bold py-3 px-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-[#5147B8] focus:outline-none">
             <span className="z-10 relative">
-              <Link to="/riskAnalyze#risk-analyzer">Discover More</Link>
+              <Link to="/riskAnalyze#risk-analyzer">Click Icons</Link>
             </span>
             <span className="absolute inset-0 bg-[#FFF8E5] opacity-0 rounded-full transition duration-500 ease-out hover:opacity-10"></span>
           </button>
         </div>
       </div>
+    </div>
+      
     </>
   );
 };

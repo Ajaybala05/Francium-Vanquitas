@@ -1,8 +1,8 @@
 import React from "react";
 import { FaChartLine } from "react-icons/fa";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
-import { FaExclamationTriangle } from 'react-icons/fa';
-import { FaClipboardList } from 'react-icons/fa';
+import { FaCoins} from 'react-icons/fa';
+import { FaUndo } from 'react-icons/fa';
 
 const skillsData = [
   {
@@ -10,31 +10,31 @@ const skillsData = [
     icon: < FaRegMoneyBillAlt className="text-4xl text-primary" />,
     link: "#",
     description:
-      " Francium Vanquitas concetrates exclusively on currency markets to maximize investment oppurtunities ans also we leverage comprehensive macroeconomic analysis",
+      " Francium Vanquitas concetrates exclusively on currency markets to maximize investment oppurtunities.",
     aosDelay: "200",
   },
   {
-    name: "Options Trading Strategies",
+    name: "In-depth Macroeconomic Analysis",
     icon: < FaChartLine className="text-4xl text-primary" />,
     link: "#",
     description:
-      "Tailored investment advice focused on options trading, analyzing individual financial goals and risk tolerance",
+      "We leverage comprehensive global macroeconomic analysis to inform our trading strategies.",
     aosDelay: "300",
   },
   {
-    name: "Risk Management Strategies",
-    icon: <FaExclamationTriangle className="text-4xl text-primary" />,
+    name: "Liquidity Assessments",
+    icon: <FaCoins className="text-4xl text-primary" />,
     link: "#",
     description:
-      "Development of comprehensive risk management plans to protect investments and optimize returns",
+      "Sophisticated liquidity assessments help in identifying and seizing the market oppurtunities.",
     aosDelay: "500",
   },
   {
-    name: "Digital Advisory",
-    icon: <FaClipboardList className="text-4xl text-primary" />,
+    name: "Consistent Superior Returns",
+    icon: <FaUndo className="text-4xl text-primary" />,
     link: "#",
     description:
-      " Providing training and resources on various trading strategies, including trend trading, swing trading, and day trading techniques ",
+      " Our unique strategy is deseigned in such a way to deliver strong returns in varying market conditions. ",
     aosDelay: "600",
   },
 ];
@@ -51,7 +51,7 @@ const Services = () => {
               data-aos-duration="500"
               className="text-center text-3xl lg:text-4xl font-bold text-violet-950 dark:text-white"
             >
-              Explore Our Services
+              Our Strengths
             </h1>
             <p
               data-aos="fade-up"

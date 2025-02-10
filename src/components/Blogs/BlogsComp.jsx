@@ -11,23 +11,23 @@ const BlogsData = [
     image: Img1,
     title: "Mastering Market Trends",
     description:
-      "Stay ahead in trading with our in-depth analysis of market trends and forecasts.",
+      "Get to know about the today's market status and get the return's high with our strategy.",
     author: "Someone",
     date: "April 22, 2022",
   },
   {
     id: 2,
     image: Img2,
-    title: "Risk Management Strategies",
-    description: "Learn how to minimize losses and maximize gains through smart risk management.",
+    title: "Investment return and profit",
+    description: "Today's returns we have made is higher percentage make sure to check it out that would be helpful.",
     author: "Someone",
     date: "April 22, 2022",
   },
   {
     id: 3,
     image: Img3,
-    title: "Building a Strong Portfolio",
-    description: "Understand diversification techniques to build a strong and resilient portfolio.",
+    title: "Currency and macroeconomics",
+    description: "Understand diversification techniques to build a strong and resilient investment.",
     author: "Someone",
     date: "April 22, 2022",
   },
@@ -39,7 +39,7 @@ const BlogsComp = () => {
       <div id="blog" className="bg-gray-100 dark:bg-gray-900 dark:text-white py-10 pb-14">
         <section data-aos="fade-up" className="container ">
           <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-semibold">
-            Our Blogs
+            Insights
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {BlogsData.map((item) => (

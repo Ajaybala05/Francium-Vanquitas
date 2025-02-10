@@ -2,88 +2,117 @@
 
 /* Moving Underline with Star */
 .underline-star {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #ffd700, transparent);
-    animation: moveUnderline 3s infinite ease-in-out;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6153CD, transparent);
+  animation: moveUnderline 3s infinite ease-in-out;
+}
+
+.underline-star::before {
+  content: "★";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #6153CD; /* Primary color */
+  font-size: 20px;
+  animation: glowStar 2s infinite alternate;
+}
+
+@keyframes moveUnderline {
+  0% {
+    transform: translateX(-50%) scaleX(0.5);
   }
-  
-  .underline-star::before {
-    content: "★";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffd700;
-    font-size: 20px;
-    animation: glowStar 2s infinite alternate;
+  50% {
+    transform: translateX(-50%) scaleX(1);
   }
-  
-  @keyframes moveUnderline {
-    0% {
-      transform: translateX(-50%) scaleX(0.5);
-    }
-    50% {
-      transform: translateX(-50%) scaleX(1);
-    }
-    100% {
-      transform: translateX(-50%) scaleX(0.5);
-    }
+  100% {
+    transform: translateX(-50%) scaleX(0.5);
   }
-  
-  @keyframes glowStar {
-    0% {
-      text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 20px #ffd700;
-    }
-    100% {
-      text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
-    }
+}
+
+@keyframes glowStar {
+  0% {
+    text-shadow: 0 0 5px #6153CD, 0 0 10px #6153CD, 0 0 20px #6153CD;
   }
-  
-  /* Gradient Text Effect */
-  .text-gradient {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: gradientShift 3s infinite alternate;
+  100% {
+    text-shadow: 0 0 10px #6153CD, 0 0 20px #6153CD, 0 0 30px #6153CD;
   }
-  
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
+}
+
+/* Gradient Text Effect */
+.text-gradient {
+  background: linear-gradient(90deg, #6153CD, #E2E2D5); /* Primary and Secondary 100 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 3s infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  /* Icon Hover Effect */
-  .w-10.h-10 {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  100% {
+    background-position: 100% 50%;
   }
-  
-  .w-10.h-10:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+/* Icon Hover Effect */
+.w-10.h-10 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.w-10.h-10:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(97, 83, 205, 0.6); /* Primary color with opacity */
+}
+
+/* Glow Effect for Titles */
+.text-4xl.font-bold.text-center.mt-12 {
+  position: relative;
+  animation: glowTitle 3s infinite alternate;
+}
+
+@keyframes glowTitle {
+  0% {
+    text-shadow: 0 0 5px rgba(97, 83, 205, 0.5), 0 0 10px rgba(97, 83, 205, 0.5); /* Primary color with opacity */
   }
-  
-  /* Glow Effect for Titles */
-  .text-4xl.font-bold.text-center.mt-12 {
-    position: relative;
-    animation: glowTitle 3s infinite alternate;
+  100% {
+    text-shadow: 0 0 10px rgba(97, 83, 205, 0.8), 0 0 20px rgba(97, 83, 205, 0.8); /* Primary color with opacity */
   }
-  
-  @keyframes glowTitle {
-    0% {
-      text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.5);
-    }
-    100% {
-      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.8);
-    }
+}
+
+/* Dark Mode Adjustments */
+.dark .underline-star {
+  background: linear-gradient(90deg, transparent, #888883, transparent); /* Secondary 200 for dark mode */
+}
+
+.dark .underline-star::before {
+  color: #888883; /* Secondary 200 for dark mode */
+}
+
+.dark .text-gradient {
+  background: linear-gradient(90deg, #888883, #E2E2D5); /* Secondary 200 and 100 for dark mode */
+}
+
+.dark .w-10.h-10:hover {
+  box-shadow: 0 0 15px rgba(136, 136, 131, 0.6); /* Secondary 200 with opacity for dark mode */
+}
+
+.dark .text-4xl.font-bold.text-center.mt-12 {
+  animation: glowTitleDark 3s infinite alternate;
+}
+
+@keyframes glowTitleDark {
+  0% {
+    text-shadow: 0 0 5px rgba(136, 136, 131, 0.5), 0 0 10px rgba(136, 136, 131, 0.5); /* Secondary 200 with opacity */
   }
-  
+  100% {
+    text-shadow: 0 0 10px rgba(136, 136, 131, 0.8), 0 0 20px rgba(136, 136, 131, 0.8); /* Secondary 200 with opacity */
+  }
+}

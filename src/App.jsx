@@ -12,13 +12,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import BrandsLogo from "./components/BrandsLogo/BrandsLogo.jsx";
 import Services from "./components/Services/Services";
-import Testimonial from "./components/Testimonial/Testimonial";
+import AboutUs from "./components/AboutUs/AboutUs.jsx";
 import BlogsComp from "./components/Blogs/BlogsComp.jsx";
 import Footer from "./components/Footer/Footer";
 import ServicePage from "./components/ServicePage/ServicePage";
 import RiskAnalyze from "./components/RiskAnalyze/RiskAnalyze";
 import Contact from "./components/Contact/Contact";
 import Blogpage from "./components/Blogpage/Blogpage";
+import Investment from "./components/Investment/Investment";
+
 
 
 const App = () => {
@@ -54,10 +56,10 @@ const App = () => {
             element={
               <>
                 <Hero />
+                <AboutUs />
                 <BrandsLogo />
                 <Services />
-                {/* <Testimonial /> */}
-                <BlogsComp />
+                {/* <BlogsComp /> */}
                 <Footer />
               </>
             }
@@ -102,6 +104,15 @@ const App = () => {
               <>
                 <Blogpage />
                 <Footer />
+              </>
+            }
+          />
+          <Route  
+            path="/investment"
+            element={
+              <>
+              <Investment/>
+              <Footer/>
               </>
             }
           />
