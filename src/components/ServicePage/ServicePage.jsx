@@ -1,13 +1,13 @@
 import React from "react";
 import img1 from "../../assets/ServicePage/trade1.jpg";
-import img2 from "../../assets/ServicePage/team2.jpg";
-import img3 from "../../assets/ServicePage/team4.jpg";
-import img4 from "../../assets/ServicePage/trade4.jpg";
+import img2 from "../../assets/ServicePage/imageNew.jpg";
+import img3 from "../../assets/ServicePage/imageNew1.jpg";
+import img4 from "../../assets/ServicePage/imageNew2.jpg";
 import img5 from "../../assets/ServicePage/service1.jpg";
-import Investimage1 from "../../assets/ServicePage/Investimage1.jpg";
-import Investimage2 from "../../assets/ServicePage/Investimage2.jpg";
-import Investimage3 from "../../assets/ServicePage/Investimage3.jpg";
-import Investimage4 from "../../assets/ServicePage/Investimage4.jpg";
+// import Investimage1 from "../../assets/ServicePage/Investimage1.jpg";
+// import Investimage2 from "../../assets/ServicePage/Investimage2.jpg";
+// import Investimage3 from "../../assets/ServicePage/Investimage3.jpg";
+// import Investimage4 from "../../assets/ServicePage/Investimage4.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -25,10 +25,10 @@ import "./ServicePage.css";
 
 const sections = [
   {
-    title: "Premium Hedge Fund Services for High Networth Individuals",
+    title: "Premium Hedge Fund Services For High Networth Individuals",
     description: [
-      "At Francium Vanquitas, we provide wealth management services with flexibility to High Networth Individuals (HNIs) & Very-High Networth Individuals (VHNIs) through Hedge fund management services.",
-      "We do not charge any management fees for the capital invested in Francium Vanquitas; instead, we operate on a profit-sharing model.",
+      "At Francium Vanquitas, we specialize in providing tailored wealth management solutions for High-Net-Worth Individuals (HNWIs) and Very-High-Net-Worth Individuals (VHNWIs) through our premier hedge fund management services. Our approach ensures flexibility, strategic asset allocation, and a commitment to maximizing wealth growth.",
+      "Our approach is designed to offer maximum flexibility, ensuring that your capital is managed with precision and strategic foresight. Unlike traditional models, we do not impose management fees on invested capital. Instead, our compensation is aligned with your success, operating on a performance-based profit-sharing model.",
     ],
     image: img2,
     reverse: true,
@@ -39,8 +39,8 @@ const sections = [
   {
     title: "Professional Trading Solutions for Retail Investors",
     description: [
-      "We also offer our extended services to Retail investors who are seeking a reliable and professional investment firm to provide average monthly returns for their invested capital.",
-      "At Francium Vanquitas, we understand the value of investors' hard-earned money and our responsibility to fulfill their dreams of making good returns in volatile markets. It is our primary job to make consistent profits in this financial market.",
+      "We extend our specialized investment services to retail investors seeking a trusted and professional firm to generate consistent monthly returns on their capital.",
+      "At Francium Vanquitas, we recognize the value of your hard-earned money and the responsibility that comes with managing it. Our mission is to help you achieve your financial goals by navigating volatile markets with expertise and precision. Generating consistent profits in the financial market isn’t just our job—it’s our commitment.",
     ],
     image: img3,
     reverse: false,
@@ -51,9 +51,9 @@ const sections = [
   {
     title: "USDT Crypto Exchange Business",
     description: [
-      "In the financial market, the usage of Cryptocurrency payments is increasing rapidly over the past few years, and it is expected that Cryptocurrency payment systems might overtake traditional Fiat currency payment systems within the next two decades.",
-      "Hence, we are prioritizing Crypto markets to create wealth and long-term business opportunities. We are in the business of buying and selling stable coins like USDT (Tether) on the Binance platform using P2P gateways to ensure safe transactions.",
-      "Since crypto payment systems are decentralized by nature, the crime ratio is also very high in this segment. Hence, we have developed very strong and reliable partners for buying and selling USDT.",
+      "The rapid adoption of cryptocurrency payments has accelerated significantly in recent years, with projections suggesting that digital assets could surpass traditional fiat currency payment systems within the next two decades.",
+      "In response to this paradigm shift, we have strategically positioned our business to capitalize on the growing crypto market, leveraging it as a vehicle for wealth generation and long-term opportunities. Our core operations focus on the buying and selling of stablecoins, particularly USDT (Tether), via Binance’s P2P gateways, ensuring seamless, secure, and efficient transactions.",
+      "Given the decentralized nature of cryptocurrency payment systems, the industry is inherently more susceptible to financial crimes.To mitigate risks and uphold the highest standards of security and reliability, we  established robust and trustworthy partnerships, reinforcing integrity of all USDT transactions.",
     ],
     image: img4,
     reverse: true,
@@ -64,8 +64,8 @@ const sections = [
   {
     title: "Our Focused Trading Segments",
     description: [
-      "Francium Vanquitas clients can enjoy access to a wide range of trading avenues, like Forex/CFD Market, Commodities, Energy Sectors, and traditional crypto markets through a single window of our systematic fund management portfolios.",
-      "On top of it, we create 'WOW' moments for our clients with the help of our dedicated financial management team, which delivers unparalleled response & flexibility. We have built our team with well-experienced professionals who actively work and monitor the growth of investors' capital amounts.",
+      "Clients of Francium Vanquitas gain seamless access to a diversified portfolio of trading opportunities, spanning Forex, CFDs, commodities, energy markets, and traditional cryptocurrency investments—all within a single, integrated fund management platform.",
+      "Our dedicated financial management team, composed of seasoned professionals, delivers exceptional service through strategic oversight, proactive investment optimization, and unparalleled responsiveness. By continuously monitoring market dynamics and capitalizing on emerging opportunities, we ensure the maximization of investment growth and long-term capital appreciation.",
     ],
     image: img1,
     reverse: false,

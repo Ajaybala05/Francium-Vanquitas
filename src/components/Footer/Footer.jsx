@@ -15,27 +15,32 @@ const scrollWithOffset = (el) => {
 const FooterLinks = [
   {
     title: "About",
-    link: "#about", // Use Link for page navigation
-  },
-  {
-    title: "Strategies",
-    link: "#strategies", // Use HashLink for section navigation
+    link: "/#AboutUs", // Use Link for page navigation
   },
   {
     title: "Services",
-    link: "#services", // Use HashLink for section navigation
+    link: "/services", // Use HashLink for section navigation
   },
   {
-    title: "Insights",
-    link: "/Blogpage", // Use Link for page navigation
+    title: "Risk Management",
+    link: "/riskAnalyze", // Use HashLink for section navigation
+  },
+  {
+    title: "Investment",
+    link: "/investment", // Use Link for page navigation
   },
 ];
 
 const HelpLinks = [
   {
     title: "Contact",
-    link: "/contact#contact-form", // Use HashLink to scroll to a specific section on the contact page
+    link: "/contact", // Use HashLink to scroll to a specific section on the contact page
   },
+  {
+    title: "Insights",
+    link: "/Blogpage", // Use HashLink to scroll to a specific section on the contact page
+  },
+
   {
     title: "Terms & Conditions",
     link: "#terms", // Use HashLink for section navigation
@@ -59,8 +64,8 @@ const Footer = () => {
               Francium vanquitas
             </h1>
             <p className="text-sm">
-            Francium Vanquitas is a dynamic company specializing in innovative solutions within the financial sector,
-             particularly focusing on macroeconomic trends and currency markets.{" "}
+            
+Francium Vanquitas is a forward-thinking company specializing in cutting-edge financial solutions, with a strong focus on macroeconomic trends and currency markets.{" "}
             </p>
             <br />
             {/* Social Handle */}

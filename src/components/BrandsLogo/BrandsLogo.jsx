@@ -60,8 +60,7 @@ const BrandsLogo = () => {
               data-aos="fade-up"
               className="text-gray-600 dark:text-gray-400 text-sm"
             >
-             Our path to sustainable and a balanced aproach for Growth
-            </p>
+Our strategy focuses on a sustainable and balanced approach to achieving growth.            </p>
           </div>
         
         <div className="py-8 md:px-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
@@ -124,7 +123,7 @@ const BrandsLogo = () => {
         <div className="flex items-center justify-center mt-6">
           <button className="relative overflow-hidden bg-[#6153CD] text-[#FFF8E5] font-bold py-3 px-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-[#5147B8] focus:outline-none">
             <span className="z-10 relative">
-              <Link to="/riskAnalyze#risk-analyzer">Click Icons</Link>
+              <Link to="/riskAnalyze#risk-analyzer">Learn More</Link>
             </span>
             <span className="absolute inset-0 bg-[#FFF8E5] opacity-0 rounded-full transition duration-500 ease-out hover:opacity-10"></span>
           </button>

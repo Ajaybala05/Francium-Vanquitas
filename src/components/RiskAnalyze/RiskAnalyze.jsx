@@ -36,7 +36,7 @@ const RiskAnalyze = () => {
       title: "Real Time Market Monitoring Dynamic Trade Oversight",
       type: "Dynamic Trade Oversight",
       description:
-        "Our technical team continuously monitor market dynamics to swiftly adapt and respond to changes, ensuring that you remain competitive and capitalize on emerging opportunities.",
+        "Our technical team consistently monitors market dynamics to swiftly adapt and respond to changes, ensuring that you stay competitive and capitalize on emerging opportunities.",
       link: "#",
       progress: 100, // Target progress value
     },
@@ -44,7 +44,7 @@ const RiskAnalyze = () => {
       title: "Risk Reduction Techniques",
       type: "Minimize Potential Losses",
       description:
-        "Our team implement effective techniques aimed at minimizing potential downside risks effectively and efficiently.",
+        "Our team utilizes sophisticated strategies aimed at effectively mitigating potential downside risks with optimal efficiency and precision.",
       link: "#",
       progress: 75, // Target progress value
     },
@@ -52,7 +52,7 @@ const RiskAnalyze = () => {
       title: "Diversification of Currency Pairs",
       type: "Enhance Trading Opportunities",
       description:
-        "Spread exposure across multiple currency pairs to effectively mitigate risks from any single currency fluctuation.",
+        "Strategically diversify exposure across multiple currency pairs to effectively mitigate risks associated with fluctuations in any single currency.",
       link: "#",
       progress: 50, // Target progress value
     },
@@ -60,7 +60,7 @@ const RiskAnalyze = () => {
       title: "Volatility-Based Position Sizing",
       type: "Safeguarding Against Market Volatility",
       description:
-        "we adjust our position sizes based on current market volatility to optimize overall risk exposure effectively.",
+        "We strategically adjust our position sizes in alignment with current market volatility, aiming to optimize risk exposure and enhance overall portfolio management.",
       link: "#",
       progress: 25, // Target progress value
     },
@@ -96,7 +96,7 @@ const RiskAnalyze = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30 w-full h-full flex flex-col items-center justify-center text-center p-5">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white animate-fadeIn">
-              Risk Structure
+              Risk Management
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-200 mt-4 mb-6 animate-fadeIn">
               Unlock your Trading potential with our expert solutions.
@@ -154,8 +154,10 @@ const RiskAnalyze = () => {
         <div className="text-3xl font-bold text-center mt-10 mb-4">
           Effective Real-Time <span className="text-violet-500">Risk Management</span>
         </div>
-        <div className="text-lg font-bold text-gray-400 mb-8 text-center">
-        Below is our focused strategies to enhance trading safety
+        <div className="text-base sm:text-lg font-bold text-gray-400 mb-8 text-center">
+        
+Our specialized strategies are designed to strengthen <br/>trading security and proactively mitigate risks in real time
+
         </div>
 
        {/* Job Listings with Progress Indicators */}

@@ -1,5 +1,5 @@
 import React from "react";
-import yellowCar from "../../assets/website/HeoStock.jpg";
+import yellowCar from "../../assets/website/img1.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
@@ -28,13 +28,17 @@ const Hero = () => {
             >
               Francium Vanquitas{" "}
             </h1>
-            <br></br><span className="text-2xl font-bold">A Premium macro fund focused on <br></br>currency market</span>
+            <br></br><span className="text-2xl font-bold">
+  A Premium Hedge fund Institution, focused on
+  <span className="hidden xl:inline"> <br /> </span> currency market
+</span>
+
             <p data-aos="fade-up" data-aos-delay="200" >
             “In the midst of chaos, there is also opportunity.” – Sun Tzu, The Art of War
             </p>
             <button className="relative overflow-hidden bg-[#6153CD] text-[#FFF8E5] font-bold py-3 px-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-[#5147B8] focus:outline-none">
             <span className="z-10 relative">
-              <Link to="/about#AboutUs/>">Learn more</Link>
+            <Link to="/#AboutUs">Learn more</Link>
             </span>
             <span className="absolute inset-0 bg-[#FFF8E5] opacity-0 rounded-full transition duration-500 ease-out hover:opacity-10"></span>
           </button>

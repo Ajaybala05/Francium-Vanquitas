@@ -12,7 +12,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div id="AboutUs" className="bg-gray-100 dark:bg-black dark:text-white py-12">
+    <div id="AboutUs"  className="bg-gray-100 dark:bg-black dark:text-white py-12">
       <div className="container mx-auto px-6 py-10 md:px-0 lg:px-8 xl:px-[85px]">
         {/* Title Section */}
         <div className="text-center mb-12">
@@ -68,15 +68,17 @@ const Testimonial = () => {
             </h1>
             <div className="text-gray-600 dark:text-gray-400" style={{ lineHeight: 1.5 }}>
               <p>
-                We are on a clear mission to position ourselves as a “Highly wanted” Hedge Fund company in this global financial industry.  
+              We are on a clear mission to position ourselves as a highly sought-after hedge fund in the global financial industry.  
                 <br /><br />
-                With more than a decade of experience and a deep understanding of the financial industry, especially in the Forex market, we offer a unique range of services to investors to improve their wealth consistently.
+                With over a decade of experience and deep expertise in the financial markets, particularly in Forex trading, we offer a unique range of investment services designed to deliver consistent wealth growth for our clients.
                 <br /><br />
-                Our strong technical team specializes in FX market analysis, generating consistent profits by exploiting currency fluctuations in the world’s largest liquid market.
+                Our highly skilled technical team specializes in FX market analysis, generating consistent profits by capitalizing on currency fluctuations in the world’s most liquid market.
                 <br /><br />
-                Over the years, we have developed strong strategies in both technical and fundamental analysis, rigorously back-tested for success. Additionally, we have expertise in risk management, leverage usage, and hedging.
+                Over the years, we have developed robust strategies in both technical and fundamental analysis, rigorously back-tested for success. Our expertise extends to risk management, leverage optimization, and hedging strategies.
                 <br /><br />
-                “We are relentlessly working to establish ourselves as one of the greatest hedge fund companies in the financial industry.”
+                <p className="font-bold text-gray-900 dark:text-white">
+  “We are relentlessly working to establish ourselves as one of the most esteemed hedge funds in the global financial industry."”
+</p>
               </p>
             </div>
           </div>

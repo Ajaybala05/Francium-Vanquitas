@@ -1,59 +1,96 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMessage, faChartLine, faCoins, faShieldAlt, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faMessage, faChartLine, faCoins, faUser, faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import blog1 from "../../assets/blog/blog123.jpg";
 
-const blogs = [
+// Separate data for left content (featured articles)
+const articlesData = [
   {
     id: 1,
-    title: "Mastering Market Trends",
-    description:
-      "Stay ahead in trading with our in-depth analysis of market trends and forecasts.",
-    detailedText:
-      "Market trends are an essential part of trading. By understanding market dynamics, you can predict future movements and make more informed decisions. Our experts provide real-time insights into global financial markets, giving you a competitive edge.",
-    image: "img1",
+    title: "Advanced Trading Techniques",
+    category: "Market Analysis",
+    author: "Financial Experts Team",
+    content: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+      "Our latest research reveals three key indicators that consistently predict market movements. These include volume analysis, price action patterns, and macroeconomic factors that influence market trends.",
+      "Learn how to combine fundamental and technical analysis for better trade decisions. We explore case studies showing successful integration of both approaches in volatile markets."
+    ],
+    stats: {
+      readers: "15K+",
+      duration: "8 min read"
+    }
   },
   {
     id: 2,
-    title: "Risk Management Strategies",
-    description:
-      "Learn how to minimize losses and maximize gains through smart risk management.",
-    detailedText:
-      "Effective risk management strategies are key to long-term success in trading. We cover various techniques, from diversification to setting stop-loss orders, to help you reduce potential losses while optimizing your portfolio’s performance.",
-    image: "img2",
+    title: "Cryptocurrency Fundamentals",
+    category: "Digital Assets",
+    author: "Blockchain Specialist",
+    content: [
+      "Demystifying blockchain technology and its impact on modern finance. Understand the underlying technology powering cryptocurrencies and its potential applications beyond digital currencies.",
+      "How to evaluate cryptocurrency projects: A practical guide for investors. Learn to assess whitepapers, team credentials, and market potential of new crypto projects.",
+      "Managing risk in high-volatility digital asset markets. Strategies for position sizing, portfolio diversification, and exit planning in crypto investments."
+    ],
+    stats: {
+      readers: "28K+",
+      duration: "10 min read"
+    }
+  }
+];
+
+// Separate data for right content (market updates)
+const updatesData = [
+  {
+    id: 1,
+    title: "Market Opens Bullish",
+    category: "Market Update",
+    content: [
+      "Dow Jones gains 150 points in early trading",
+      "Tech stocks lead market rally",
+      "Energy sector shows volatility"
+    ],
+    timestamp: "09:45 AM"
+  },
+  {
+    id: 2,
+    title: "Crypto Market Update",
+    category: "Digital Assets",
+    content: [
+      "Bitcoin holds steady at $29,000",
+      "Ethereum network upgrades completed",
+      "NFT market shows increased activity"
+    ],
+    timestamp: "10:15 AM"
   },
   {
     id: 3,
-    title: "Building a Strong Portfolio",
-    description:
-      "Understand diversification techniques to build a strong and resilient portfolio.",
-    detailedText:
-      "Building a strong portfolio is not just about picking high-performing assets. It’s about balancing risk and reward. Our experts explain diversification techniques that allow you to minimize risk while maximizing returns in your investment strategy.",
-    image: "img3",
-  },
+    title: "Commodities Report",
+    category: "Commodities",
+    content: [
+      "Gold prices rise on safe-haven demand",
+      "Oil prices fluctuate amid supply concerns",
+      "Agricultural commodities show mixed results"
+    ],
+    timestamp: "11:00 AM"
+  }
 ];
 
 const BlogPage = () => {
   const [oldMessages, setOldMessages] = useState([]);
-  const [expandedMessage, setExpandedMessage] = useState(null); // Track expanded message
-  const [expandedCarousel, setExpandedCarousel] = useState(null); // Track expanded carousel item
-  
+  const [expandedMessage, setExpandedMessage] = useState(null);
+  const [activePost] = useState(articlesData[0]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setOldMessages((prev) => {
-        if (prev.length === blogs.length) return prev;
-        return [blogs[prev.length], ...prev];
+        if (prev.length === updatesData.length) return prev;
+        return [updatesData[prev.length], ...prev];
       });
     }, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  const toggleExpandedMessage = (blogId) => {
-    setExpandedMessage(expandedMessage === blogId ? null : blogId);
-  };
-
-  const toggleExpandedCarousel = (blogId) => {
-    setExpandedCarousel(expandedCarousel === blogId ? null : blogId);
+  const toggleExpandedMessage = (postId) => {
+    setExpandedMessage(expandedMessage === postId ? null : postId);
   };
 
   return (
@@ -62,138 +99,139 @@ const BlogPage = () => {
       <div className="relative w-full h-[80vh] flex items-center justify-center">
         <img
           src={blog1}
-          alt="Services Header"
+          alt="Blog Header"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute bg-black bg-opacity-50 w-full h-full flex flex-col items-center justify-center text-center p-5">
-          <h1 className="text-6xl font-bold text-white">Explore Our Blogs</h1>
+          <h1 className="text-6xl font-bold text-white">Trading Insights Hub</h1>
           <p className="text-xl text-gray-200 mt-4 mb-6">
-            Get key insights from our pages blog.
+            Expert analysis and market intelligence
           </p>
           <a
             href="#blog"
             className="bg-[#6153CD] hover:bg-[#5147B8] text-white font-bold py-3 px-6 rounded-lg transition duration-300"
           >
-            View Post
+            Explore Insights
           </a>
         </div>
       </div>
 
       {/* Blog Section */}
-      <div>
-        <h1
-          id="blog"
-          className="text-3xl font-bold flex justify-center items-center mt-12"
-        >
-          <div className="w-10 h-10 flex items-center justify-center bg-green-900 rounded-full text-xl font-bold mr-2">
-            <FontAwesomeIcon icon={faMessage} className="text-white" />
+      <div className="container mx-auto">
+        <h1 id="blog" className="text-3xl font-bold flex justify-center items-center mt-12">
+          <div className="w-10 h-10 flex items-center justify-center bg-[#6153CD] rounded-full mr-2">
+            <FontAwesomeIcon icon={faMessage} className="text-white text-lg" />
           </div>
-          Daily Inputs
+          Market Intelligence Feed
         </h1>
-      </div>
-      <h1 className="ml-12 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-semibold mt-8">
-        Key Insights
-      </h1>
-      <div className="flex flex-col md:flex-row gap-8 p-10">
-        {/* Trade Card Design (2/3 space) */}
-        <div className="w-full md:w-2/3  dark:text-white">
-          <div
-            className="relative w-full h-[480px] rounded-xl overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800"
-           
-          >
-            {/* Trade Card Content */}
-            <div className="flex flex-col items-start justify-start p-8 space-y-6">
-              {/* Performance Metrics */}
-              <div className="text-center w-full">
-                <h3 className="text-3xl font-bold">Trade Profit Post</h3>
-                <p className="text-6xl font-bold text-teal-600 mt-4">$100,000</p>
-                <p className="text-sm text-gray-600 dark:text-white mt-2">
-                  Starting Payout
-                </p>
-              </div>
 
-              {/* Trader Information */}
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <FontAwesomeIcon icon={faUser} className="text-gray-600" />
-                  <p className="text-xl font-semibold">Ajay</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10">
+          {/* Left Section - Featured Articles */}
+          <div className="md:col-span-2">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl hover:transform hover:scale-[1.005] transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#6153CD] to-[#8579E6] rounded-lg flex items-center justify-center mr-4">
+                  <FontAwesomeIcon 
+                    icon={faBookOpen} 
+                    className="text-white text-xl" 
+                  />
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Funded Since: January 2020
-                </p>
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+                    Featured Analysis
+                  </h2>
+                  <p className="text-gray-500 dark:text-gray-400 mt-1">
+                    In-depth market breakdown
+                  </p>
+                </div>
               </div>
-
-              {/* Trading Strategies */}
-              <div className="w-full">
-                <div className="flex items-center gap-2">
-                  <FontAwesomeIcon icon={faChartLine} className="text-gray-600" />
-                  <p className="text-xl font-semibold">Trading Strategy: AAA</p>
+              
+              <article className="prose dark:prose-invert max-w-none">
+                <h3 className="text-2xl font-semibold mb-6 text-[#6153CD]">
+                  {activePost.title}
+                </h3>
+                <div className="border-l-4 border-[#6153CD] pl-6 ml-4 space-y-6">
+                  {activePost.content.map((paragraph, index) => (
+                    <p 
+                      key={index}
+                      className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                  Instruments: Forex, Crypto
-                </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  profit: Best
-                </p>
+              </article>
+
+              <div className="mt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
+                <div className="flex items-center space-x-4">
+                  <div className="flex items-center text-gray-500">
+                    <FontAwesomeIcon icon={faUser} className="mr-2" />
+                    <span>{activePost.author}</span>
+                  </div>
+                  <div className="flex items-center text-gray-500">
+                    <FontAwesomeIcon icon={faCoins} className="mr-2" />
+                    <span>{activePost.stats.readers} readers</span>
+                  </div>
+                </div>
+                <div className="bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-lg">
+                  <span className="text-gray-600 dark:text-gray-300">
+                    📖 {activePost.stats.duration}
+                  </span>
+                </div>
               </div>
+            </div>
+          </div>
 
-              {/* Risk Management */}
-              <div className="w-full">
-                <div className="flex items-center gap-2">
-                  <FontAwesomeIcon icon={faShieldAlt} className="text-gray-600" />
-                  <p className="text-xl font-semibold">Risk Management</p>
-                </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                  Max Drawdown: 5%
-                </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Risk-Reward Ratio: 1:2
-                </p>
-              </div>
-
-              {/* Additional Insights */}
-              <div className="w-full">
-                <div className="flex items-center gap-2">
-                  <FontAwesomeIcon icon={faCoins} className="text-gray-600" />
-                  <p className="text-xl font-semibold">Key Achievements</p>
-                </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                  - Achieved 30% annual returns for 3 consecutive years.
-                </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  - Successfully managed a $1M portfolio with minimal drawdowns.
-                </p>
+          {/* Right Section - Market Updates */}
+          <div className="md:col-span-1 self-start sticky top-6">
+            <div className="w-full bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white flex items-center">
+                <FontAwesomeIcon 
+                  icon={faChartLine} 
+                  className="mr-2 text-[#6153CD]" 
+                />
+                Live Market Updates
+              </h2>
+              <div className="space-y-4 max-h-[80vh] overflow-y-auto">
+                {oldMessages.map((post, index) => (
+                  <div
+                    key={index}
+                    className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-start">
+                      <div className="w-8 h-8 bg-[#6153CD] rounded-lg flex items-center justify-center mr-3">
+                        <span className="text-white text-sm">{index + 1}</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3
+                          className="font-semibold cursor-pointer text-gray-800 dark:text-white"
+                          onClick={() => toggleExpandedMessage(post.id)}
+                        >
+                          {post.title}
+                          <span className="block text-xs text-[#6153CD] mt-1">
+                            {post.timestamp} • {post.category}
+                          </span>
+                        </h3>
+                        {expandedMessage === post.id && (
+                          <div className="mt-4 space-y-2">
+                            {post.content.map((item, idx) => (
+                              <p 
+                                key={idx}
+                                className="text-sm text-gray-600 dark:text-gray-400"
+                              >
+                                ➤ {item}
+                              </p>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-full h-full md:w-1/3 bg-gray-100 dark:bg-gray-900 p-5 rounded-xl shadow-lg">
-          <h2 className="text-xl font-semibold mb-4">Old Messages</h2>
-          <div className="space-y-4">
-            {oldMessages.map((blog, index) => (
-              <div
-                key={index}
-                className="p-3 bg-white dark:bg-gray-800 rounded-lg shadow"
-              >
-                <h3
-                  className="font-semibold cursor-pointer"
-                  onClick={() => toggleExpandedMessage(blog.id)}
-                >
-                  {blog.title}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  {blog.description}
-                </p>
-                {expandedMessage === blog.id && (
-                  <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-                    {blog.detailedText}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-          </div>
       </div>
     </div>
   );

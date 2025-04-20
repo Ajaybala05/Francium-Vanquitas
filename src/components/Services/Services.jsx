@@ -7,15 +7,15 @@ import { FaUndo } from 'react-icons/fa';
 const skillsData = [
   {
     name: "Specialized Currency Focus",
-    icon: < FaRegMoneyBillAlt className="text-4xl text-primary" />,
+    icon: <FaRegMoneyBillAlt className="text-4xl text-primary" />,
     link: "#",
     description:
-      " Francium Vanquitas concetrates exclusively on currency markets to maximize investment oppurtunities.",
+      "Francium Vanquitas focuses exclusively on currency markets to maximize investment opportunities.",
     aosDelay: "200",
   },
   {
     name: "In-depth Macroeconomic Analysis",
-    icon: < FaChartLine className="text-4xl text-primary" />,
+    icon: <FaChartLine className="text-4xl text-primary" />,
     link: "#",
     description:
       "We leverage comprehensive global macroeconomic analysis to inform our trading strategies.",
@@ -26,7 +26,7 @@ const skillsData = [
     icon: <FaCoins className="text-4xl text-primary" />,
     link: "#",
     description:
-      "Sophisticated liquidity assessments help in identifying and seizing the market oppurtunities.",
+      "Advanced liquidity assessments enable precise identification and capitalization on market opportunities.",
     aosDelay: "500",
   },
   {
@@ -34,10 +34,11 @@ const skillsData = [
     icon: <FaUndo className="text-4xl text-primary" />,
     link: "#",
     description:
-      " Our unique strategy is deseigned in such a way to deliver strong returns in varying market conditions. ",
+      "We conduct in-depth global macroeconomic analysis to strategically inform our trading decisions.",
     aosDelay: "600",
   },
 ];
+
 const Services = () => {
   return (
     <>
